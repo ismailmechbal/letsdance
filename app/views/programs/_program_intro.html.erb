@@ -1,0 +1,5 @@
+<section class="flex one program-intro m-t-b-80" itemprop="containsSeason" itemscope itemtype="http://schema.org/TVSeason">
+  <h1 itemprop="name"><%= @program[:name] %></h1>
+  <p itemprop="headline"><%= @program[:description] %></p>
+  <%= image_tag @program[:top_image], alt: @program[:name], itemprop: "image" %>
+</section>

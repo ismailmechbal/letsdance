@@ -1,0 +1,16 @@
+<section class="program-teasers m-t-b-80">
+  <% @program[:social_block_teasers].each do |item| %>
+    <article class="flex one three-500 three-800" itemscope itemtype="http://schema.org/Article">
+      <div class="one">
+        <%= link_to item["link_url"], itemprop: "url" do %>
+          <%= image_tag item["image"], class: "img-responsive", itemprop: "image" %>
+        <% end %>
+      </div>
+      <div class="one">
+        <h2 itemprop="name"><%= item["heading"] %></h2>
+        <p itemprop="about"><%= item["lead"] %></p>
+        <%= link_to item["kicker"], item["link_url"], itemprop: "url" %>
+      </div>
+    </article>
+  <% end %>
+</section>

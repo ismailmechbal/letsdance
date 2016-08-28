@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Let's Dance</title>
+    <%= csrf_meta_tags %>
+    <link href="https://cdn.jsdelivr.net/picnicss/6.1.4/picnic.min.css" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <%= render "partials/navbar" %>
+    <main>
+      <%= yield %>
+    </main>
+    <%= render "partials/footer" %>
+  </body>
+</html>

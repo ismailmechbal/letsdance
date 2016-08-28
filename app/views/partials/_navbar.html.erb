@@ -1,0 +1,27 @@
+<header>
+  <nav class="primary" itemscope itemtype="http://schema.org/Brand">
+    <%= link_to root_path, class: "brand", itemprop: "logo" do %>
+      <?xml version="1.0" encoding="utf-8"?>
+      <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+      <svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="46.16px" height="46.16px" viewBox="35.02 44.62 46.16 46.16" enable-background="new 35.02 44.62 46.16 46.16" xml:space="preserve">
+        <g id="Page-1" sketch:type="MSPage">
+          <g id="TV4Play-logotyp-NY" sketch:type="MSLayerGroup">
+            <path id="Shape_5_" sketch:type="MSShapeGroup" fill="#FF3334" d="M58.1,90.78c12.76,0,23.08-10.32,23.08-23.08
+            c0-12.761-10.319-23.08-23.08-23.08S35.02,54.939,35.02,67.7C35.02,80.42,45.34,90.78,58.1,90.78"/>
+            <path id="Shape_6_" sketch:type="MSShapeGroup" fill="#FFFFFF" d="M59.22,75.26h-6l6-8.88V75.26L59.22,75.26z M68.54,75.22h-3.12
+            V48.58c0-0.2-0.12-0.4-0.36-0.44c-0.2-0.08-0.4,0-0.52,0.2L42.86,80.38c-0.08,0.16-0.12,0.32-0.04,0.479
+            c0.08,0.16,0.24,0.24,0.399,0.24h16V84.7c0,0.239,0.2,0.479,0.48,0.479h5.2c0.279,0,0.479-0.24,0.479-0.479V81.1h3.12
+            c0.28,0,0.48-0.199,0.48-0.479V75.7C69.02,75.46,68.82,75.22,68.54,75.22L68.54,75.22z"/>
+          </g>
+        </g>
+      </svg>
+      <span>Let's Dance</span>
+    <% end %>
+    <input id="bmenu" type="checkbox" class="show">
+    <label for="bmenu" class="burger toggle pseudo button">menu</label>
+    <div class="menu">
+      <%= link_to "The program", programs_path, class: "pseudo button" %>
+      <%= link_to "Github", "https://github.com/picnicss/picnic", class: "button" %>
+    </div>
+  </nav>
+</header>

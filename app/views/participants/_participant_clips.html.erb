@@ -1,0 +1,16 @@
+<section class="flex one four-500 four-800 participant-clips m-t-b-80">
+  <% @participant.each do |participant| %>
+    <article class="one" itemscope itemtype="http://schema.org/Clip">
+      <%= link_to "http://www.tv4play.se/program/idol?video_id=#{participant[:id]}", itemprop: "url" do %>
+        <%= image_tag participant[:image], class: "img-responsive", itemprop: "image" %>
+      <% end %>
+      <div class="footer">
+        <h3 class="title" itemprop="text"><%= link_to participant[:title], "http://www.tv4play.se/program/idol?video_id=#{participant[:id]}" %></h3>
+        <h6 itemprop="datePublished" content="<%= participant[:published_date] %>"><%= participant[:published_date] %></h6>
+        <% participant[:tags].each do |tag| %>
+          <span class="tags" itemprop="keywords"><%= tag %></span>
+        <% end %>
+      </div>
+    </article>
+  <% end %>
+</section>

@@ -1,0 +1,11 @@
+<section class="flex one four-500 four-800 program-participant m-t-b-80">
+  <% @program[:participants].each do |participant| %>
+    <article class="one" itemscope itemtype="http://schema.org/Person" itemprop="actor">
+      <%= image_tag participant["image"]["url"], itemprop: "image" %>
+      <div class="footer">
+        <h2 itemprop="name"><%= link_to participant["name"], participant_path(:id => participant["person_tag"]), itemprop: "url" %></h2>
+        <p class="description" itemprop="description"><%= participant["description"] %></p>
+      </div>
+    </article>
+  <% end %>
+</section>
